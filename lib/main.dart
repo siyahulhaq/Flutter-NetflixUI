@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:n_flix/core/contants/colors.dart';
 import 'package:n_flix/presentation/main_page/screen_main_page.dart';
 
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         backgroundColor: backgroundColor,
         scaffoldBackgroundColor: backgroundColor,
+        fontFamily: GoogleFonts.montserrat().fontFamily,
         textTheme: const TextTheme(
           bodyText1: TextStyle(
             color: Colors.white,
