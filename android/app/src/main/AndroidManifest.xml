@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.n_flix">
    <application
-        android:label="n_flix"
+        android:label="NetFlix UI"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
