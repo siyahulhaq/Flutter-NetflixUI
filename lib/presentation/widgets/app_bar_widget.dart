@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:n_flix/presentation/main_page/widgets/bottom_navigation_bar.dart';
 
 class AppBarWidget extends StatelessWidget {
   final String title;
@@ -6,32 +7,35 @@ class AppBarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Expanded(
-            child: Text(
-          title,
-          style: const TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Expanded(
+              child: Text(
+            title,
+            style: const TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+            ),
+          )),
+          IconButton(
+            icon: const Icon(Icons.cast),
+            color: Colors.white,
+            onPressed: () {
+              print('cast');
+            },
           ),
-        )),
-        IconButton(
-          icon: const Icon(Icons.cast),
-          color: Colors.white,
-          onPressed: () {
-            print('cast');
-          },
-        ),
-        IconButton(
-          icon: const Icon(Icons.search),
-          color: Colors.white,
-          onPressed: () {
-            print('search');
-          },
-        ),
-      ],
+          IconButton(
+            icon: const Icon(Icons.search),
+            color: Colors.white,
+            onPressed: () {
+              indexChangeNotifier.value = 3;
+            },
+          ),
+        ],
+      ),
     );
   }
 }

@@ -31,50 +31,53 @@ class DownloadsScreen extends StatelessWidget {
         appBar: const PreferredSize(
             child: AppBarWidget(title: "Downloads"),
             preferredSize: Size.fromHeight(50)),
-        body: ListView(
-          children: [
-            Row(children: const [
-              Icon(Icons.settings, color: Colors.grey),
-              Text("Smart Download"),
-            ]),
-            const Text("Introduciing downloads for you"),
-            const Text(
-                "We will download a personalised list of movies for you, so there is always something to watch on your device."),
-            SizedBox(
-              width: size.width,
-              height: size.width,
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  CircleAvatar(
-                    radius: size.width * 0.37,
-                    backgroundColor: Colors.grey[700],
-                  ),
-                  ...images.map((e) => ImageRotateWidget(image: e)).toList(),
-                ],
+        body: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: ListView(
+            children: [
+              Row(children: const [
+                Icon(Icons.settings, color: Colors.grey),
+                Text("Smart Download"),
+              ]),
+              const Text("Introduciing downloads for you"),
+              const Text(
+                  "We will download a personalised list of movies for you, so there is always something to watch on your device."),
+              SizedBox(
+                width: size.width,
+                height: size.width,
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    CircleAvatar(
+                      radius: size.width * 0.37,
+                      backgroundColor: Colors.grey[700],
+                    ),
+                    ...images.map((e) => ImageRotateWidget(image: e)).toList(),
+                  ],
+                ),
               ),
-            ),
-            MaterialButton(
-              onPressed: () {},
-              child: const Text("Set up",
-                  style: TextStyle(
-                    color: kColorWhite,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  )),
-              color: kButtonColorBlue,
-            ),
-            MaterialButton(
-              onPressed: () {},
-              child: const Text("See What you can Download",
-                  style: TextStyle(
-                    color: kColorBlack,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  )),
-              color: kColorWhite,
-            ),
-          ],
+              MaterialButton(
+                onPressed: () {},
+                child: const Text("Set up",
+                    style: TextStyle(
+                      color: kColorWhite,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    )),
+                color: kButtonColorBlue,
+              ),
+              MaterialButton(
+                onPressed: () {},
+                child: const Text("See What you can Download",
+                    style: TextStyle(
+                      color: kColorBlack,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    )),
+                color: kColorWhite,
+              ),
+            ],
+          ),
         ));
   }
 }
