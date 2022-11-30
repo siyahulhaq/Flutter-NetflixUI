@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:n_flix/core/contants/dimensions.dart';
 import 'package:n_flix/presentation/search_page/widgets/search_results.dart';
+import 'package:n_flix/presentation/widgets/title_widget.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({Key? key}) : super(key: key);
@@ -34,13 +35,7 @@ class SearchScreen extends StatelessWidget {
                 kHeight,
                 const Padding(
                   padding: EdgeInsets.fromLTRB(0, 10.0, 0, 10.0),
-                  child: Text(
-                    "Recent Searches",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                    ),
-                  ),
+                  child: MainTitle(title: "Recent Searches"),
                 ),
                 kHeight,
                 const SearchResults(),
